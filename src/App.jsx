@@ -308,3 +308,24 @@ export default function App() {
     </div>
   );
 }
+return (
+  <div className="app">
+    <div className="card">
+      <h1 className="title">恋愛価値観診断</h1>
+
+      <div className="question">
+        {q.text}
+      </div>
+
+      {q.options.map(opt => (
+        <div
+          key={opt}
+          className="answer"
+          onClick={() => handleAnswer(opt)}
+        >
+          {opt}
+        </div>
+      ))}
+    </div>
+  </div>
+);

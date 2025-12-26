@@ -152,32 +152,38 @@ export default function App() {
     setTimeout(() => setAdminClickCount(0), 3000);
   };
 
-  const IntroView = () => (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] px-6 text-center animate-in fade-in duration-500">
-      <div className="w-24 h-24 bg-rose-50 rounded-2xl flex items-center justify-center mb-6 rotate-6 shadow-sm">
-        <Heart size={48} className="text-rose-400 fill-rose-200" />
+  function App() {
+  return (
+    <>
+      <div className="header">
+        <div className="logo">
+          <div className="logo-icon">♡</div>
+          VALUE MATCHER
+        </div>
+        <div className="live">LIVE MODE</div>
       </div>
-      <h1 
-        className="text-2xl font-black text-gray-800 mb-4 select-none cursor-pointer active:scale-95 transition-transform tracking-tight"
-        onClick={handleTitleClick}
-      >
-        恋愛価値観・本音深層診断 50
-      </h1>
-      <p className="text-gray-500 max-w-xs mb-10 leading-relaxed text-sm">
-        全50問の精密テストで、あなたの恋愛のクセや、心の奥に隠した本当の願望を浮き彫りにします。
-      </p>
-      <button 
-        onClick={() => setView('quiz')}
-        className="bg-gray-900 text-white font-bold py-4 px-12 rounded-2xl shadow-xl hover:bg-black active:scale-95 transition-all w-full max-w-xs"
-      >
-        診断を開始する
-      </button>
-      <div className="mt-8 grid grid-cols-2 gap-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-        <span className="flex items-center gap-1 justify-center"><BarChart3 size={12}/> 50 Questions</span>
-        <span className="flex items-center gap-1 justify-center"><Lock size={12}/> Privacy Protected</span>
+
+      <div className="container">
+        <div className="hero">
+          <div className="hero-icon">♡</div>
+          <div className="hero-title">
+            恋愛価値観・本音深層診断 50
+          </div>
+          <div className="hero-text">
+            全50問の精密テストで、あなたの恋愛のクセや、
+            心の奥に隠した本当の願望を浮き彫りにします。
+          </div>
+
+          <button className="primary-btn">
+            診断を開始する
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    </>
+  )
+}
+
+export default App
 
   const QuizView = () => {
     const q = QUESTIONS[currentQuestion];

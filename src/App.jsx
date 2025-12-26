@@ -1,8 +1,3 @@
-function App() {
-  return <h1>変わったら成功</h1>
-}
-export default App
-
 import React, { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';

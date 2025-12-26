@@ -1,3 +1,35 @@
+ function App() {
+  return (
+    <>
+      <div className="header">
+        <div className="logo">
+          <div className="logo-icon">♡</div>
+          VALUE MATCHER
+        </div>
+        <div className="live">LIVE MODE</div>
+      </div>
+
+      <div className="container">
+        <div className="hero">
+          <div className="hero-icon">♡</div>
+          <div className="hero-title">
+            恋愛価値観・本音深層診断 50
+          </div>
+          <div className="hero-text">
+            全50問の精密テストで、あなたの恋愛のクセや、
+            心の奥に隠した本当の願望を浮き彫りにします。
+          </div>
+
+          <button className="primary-btn">
+            診断を開始する
+          </button>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default App
 import React, { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
@@ -151,39 +183,6 @@ export default function App() {
     });
     setTimeout(() => setAdminClickCount(0), 3000);
   };
-
-  function App() {
-  return (
-    <>
-      <div className="header">
-        <div className="logo">
-          <div className="logo-icon">♡</div>
-          VALUE MATCHER
-        </div>
-        <div className="live">LIVE MODE</div>
-      </div>
-
-      <div className="container">
-        <div className="hero">
-          <div className="hero-icon">♡</div>
-          <div className="hero-title">
-            恋愛価値観・本音深層診断 50
-          </div>
-          <div className="hero-text">
-            全50問の精密テストで、あなたの恋愛のクセや、
-            心の奥に隠した本当の願望を浮き彫りにします。
-          </div>
-
-          <button className="primary-btn">
-            診断を開始する
-          </button>
-        </div>
-      </div>
-    </>
-  )
-}
-
-export default App
 
   const QuizView = () => {
     const q = QUESTIONS[currentQuestion];
